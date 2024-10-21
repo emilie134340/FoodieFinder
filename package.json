@@ -2,9 +2,10 @@
   "name": "foodie-finder",
   "version": "1.0.0",
   "description": "## Our Vision FoodieFinder empowers food enthusiasts to effortlessly discover new and exciting dining experiences tailored to their tastes, preferences, and dietary needs. By providing personalized recommendations for restaurants and specific dishes, we transform dining from a routine habit into a memorable adventure. Our platform fosters inclusivity, ensuring that everyone—from casual diners to those with strict dietary restrictions—can explore and enjoy exceptional culinary experiences without the overwhelm of too many choices.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/emilie134340/foodie-finder#readme",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "node": "^22.10.0"
   }
 }
