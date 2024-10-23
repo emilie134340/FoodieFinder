@@ -2,4 +2,4 @@
 GET http://localhost:3000/
 
 ###
-GET https://foodie-finder-2uy6.onrender.com
+GET https://foodiefinder-76wj.onrender.com
