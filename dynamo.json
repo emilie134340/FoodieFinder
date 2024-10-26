@@ -1,0 +1,122 @@
+[
+{
+    "id": { "S": "1" },
+    "name": { "S": "The Hickory" },
+    "location": { "S": "485 N 2nd E, Rexburg, ID 83440" },
+    "description": { "S": "The Hickory is known for its slow-smoked barbecue, gourmet burgers, and rustic, relaxed atmosphere." },
+    "image": { "S": "https://example.com/images/the-hickory.jpg" },
+    "cuisine": { "S": "Barbecue, American" },
+    "dietaryRestrictions": { "S": "Gluten-Free, Nut-Free" },
+    "price_range": { "S": "$$" }
+},
+{
+    "id": { "S": "2" },
+    "name": { "S": "Da Pineapple Grill" },
+    "location": { "S": "383 S 2nd W, Rexburg, ID 83440" },
+    "description": { "S": "Da Pineapple Grill brings a taste of the islands to Rexburg with Hawaiian-inspired dishes and sushi." },
+    "image": { "S": "https://example.com/images/da-pineapple-grill.jpg" },
+    "cuisine": { "S": "Hawaiian, Sushi" },
+    "dietaryRestrictions": { "S": "Gluten-Free, Dairy-Free" },
+    "price_range": { "S": "$$" }
+},
+{
+    "id": { "S": "3" },
+    "name": { "S": "Original Thai" },
+    "location": { "S": "35 S 2nd W, Rexburg, ID 83440" },
+    "description": { "S": "Authentic Thai cuisine featuring flavorful curries, noodle dishes, and vegetarian options in a cozy setting." },
+    "image": { "S": "https://example.com/images/original-thai.jpg" },
+    "cuisine": { "S": "Thai" },
+    "dietaryRestrictions": { "S": "Dairy-Free, Vegan" },
+    "price_range": { "S": "$$" }
+},
+{
+    "id": { "S": "4" },
+    "name": { "S": "Pizza Pie Café" },
+    "location": { "S": "163 W Main St, Rexburg, ID 83440" },
+    "description": { "S": "A family-friendly buffet offering a wide selection of pizzas, pasta, and salads at an affordable price." },
+    "image": { "S": "https://example.com/images/pizza-pie-cafe.jpg" },
+    "cuisine": { "S": "Pizza, Italian" },
+    "dietaryRestrictions": { "S": "Vegetarian" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "5" },
+    "name": { "S": "Millhollow Frozen Yogurt & Deli" },
+    "location": { "S": "48 S 1st E, Rexburg, ID 83440" },
+    "description": { "S": "Popular for its frozen yogurt and sandwiches, Millhollow is a casual spot for a quick and tasty meal." },
+    "image": { "S": "https://example.com/images/millhollow.jpg" },
+    "cuisine": { "S": "American, Deli" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free, Dairy-Free" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "6" },
+    "name": { "S": "The Crepery" },
+    "location": { "S": "160 W 2nd S, Rexburg, ID 83440" },
+    "description": { "S": "The Crepery offers sweet and savory crepes along with a cozy, coffee-shop ambiance." },
+    "image": { "S": "https://example.com/images/the-crepery.jpg" },
+    "cuisine": { "S": "French, Café" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free" },
+    "price_range": { "S": "$$" }
+},
+{
+    "id": { "S": "7" },
+    "name": { "S": "Righteous Slice" },
+    "location": { "S": "175 W 2nd S, Rexburg, ID 83440" },
+    "description": { "S": "Righteous Slice is a wood-fired pizza restaurant offering fresh, artisan pizzas made with locally sourced ingredients." },
+    "image": { "S": "https://example.com/images/righteous-slice.jpg" },
+    "cuisine": { "S": "Pizza, Italian" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free" },
+    "price_range": { "S": "$$" }
+},
+{
+    "id": { "S": "8" },
+    "name": { "S": "McDonald's" },
+    "location": { "S": "560 N 2nd E, Rexburg, ID 83440" },
+    "description": { "S": "Fast food chain offering classic burgers, fries, and breakfast options in a family-friendly environment." },
+    "image": { "S": "https://example.com/images/mcdonalds.jpg" },
+    "cuisine": { "S": "Fast Food, American" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "9" },
+    "name": { "S": "Taco Bell" },
+    "location": { "S": "275 Stationery Pl, Rexburg, ID 83440" },
+    "description": { "S": "Mexican-inspired fast food featuring tacos, burritos, and other customizable meals." },
+    "image": { "S": "https://example.com/images/taco-bell.jpg" },
+    "cuisine": { "S": "Fast Food, Mexican" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free, Dairy-Free, Nut-Free" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "10" },
+    "name": { "S": "Wendy's" },
+    "location": { "S": "730 W Main St, Rexburg, ID 83440" },
+    "description": { "S": "Fast food chain known for its square burgers, fresh salads, and the famous Frosty dessert." },
+    "image": { "S": "https://example.com/images/wendys.jpg" },
+    "cuisine": { "S": "Fast Food, American" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free, Dairy-Free, Nut-Free" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "11" },
+    "name": { "S": "Subway" },
+    "location": { "S": "175 W 2nd S, Rexburg, ID 83440" },
+    "description": { "S": "Popular fast-food chain offering customizable sandwiches, salads, and wraps made fresh." },
+    "image": { "S": "https://example.com/images/subway.jpg" },
+    "cuisine": { "S": "Fast Food, Deli" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free, Dairy-Free, Nut-Free" },
+    "price_range": { "S": "$" }
+},
+{
+    "id": { "S": "12" },
+    "name": { "S": "Burger King" },
+    "location": { "S": "124 W Main St, Rexburg, ID 83440" },
+    "description": { "S": "Home of the Whopper, Burger King offers a variety of flame-grilled burgers, chicken sandwiches, and sides." },
+    "image": { "S": "https://example.com/images/burger-king.jpg" },
+    "cuisine": { "S": "Fast Food, American" },
+    "dietaryRestrictions": { "S": "Vegetarian, Gluten-Free, Dairy-Free, Nut-Free" },
+    "price_range": { "S": "$" }
+}
+]
