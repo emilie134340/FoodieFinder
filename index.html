@@ -1,114 +1,119 @@
 <html><head>
     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Foodie Finder - Discover Your Next Favorite Restaurant</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-    <header class="header">
-      <h1>Foodie Finder</h1>
-    </header>
-    
-    <div class="container">
-      <div class="filters">
-        <button class="filter-btn active" data-cuisine="all">All Cuisines</button>
-        <button class="filter-btn" data-cuisine="mexican">Mexican</button>
-        <button class="filter-btn" data-cuisine="italian">Italian</button>
-        <button class="filter-btn" data-cuisine="japanese">Japanese</button>
-        <button class="filter-btn" data-cuisine="indian">Indian</button>
-        <button class="filter-btn" data-cuisine="thai">Thai</button>
-      </div>
-    
-      <!-- Home Page -->
-      <div id="home-page" class="page active">
-        <div class="swipe-section">
-          <div class="card-container">
-            <div class="restaurant-card">
-              <div class="card-image" style="background-image: url('https://source.unsplash.com/random/800x600/?restaurant,mexican')">
-              </div>
-              <div class="card-content">
-                <h2 class="restaurant-name">Chipotle</h2>
-                <div class="restaurant-details">
-                  <span>Mexican</span>
-                  <span>$$</span>
-                  <span>0.8 miles</span>
-                </div>
-                <div class="rating">
-                  <i class="ph ph-star-fill"></i>
-                  <span>4.5</span>
-                  <span>(2.3k reviews)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-          <div class="navigation">
-            <button class="nav-btn" onclick="previousCard()">
-              <i class="ph ph-arrow-left"></i>
-            </button>
-            <button class="nav-btn" onclick="nextCard()">
-              <i class="ph ph-arrow-right"></i>
-            </button>
-          </div>
-          <div class="swipe-hint">
-            Swipe left or right to explore more restaurants
-          </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Foodie Finder - Discover Your Next Favorite Restaurant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="styles.css">
+</head><body>
+<header class="header">
+<h1>Foodie Finder</h1>
+</header>
+
+<div class="container">
+<div class="filters">
+  <button class="filter-btn active" data-cuisine="all">All Cuisines</button>
+  <button class="filter-btn" data-cuisine="mexican">Mexican</button>
+  <button class="filter-btn" data-cuisine="italian">Italian</button>
+  <button class="filter-btn" data-cuisine="japanese">Japanese</button>
+  <button class="filter-btn" data-cuisine="indian">Indian</button>
+  <button class="filter-btn" data-cuisine="thai">Thai</button>
+</div>
+
+<!-- Home Page -->
+<div id="home-page" class="page active">
+  <div class="swipe-section">
+    <div class="card-container">
+      <div class="restaurant-card">
+        <div class="card-image" style="background-image: url('https://source.unsplash.com/random/800x600/?restaurant,mexican')">
         </div>
-      </div>
-    
-      <!-- Search Page -->
-      <div id="search-page" class="page">
-        <div class="search-container">
-          <input type="text" class="search-input" placeholder="Search restaurants, cuisines, or dishes..." oninput="searchRestaurants(this.value)">
-        </div>
-        <div id="search-results"></div>
-      </div>
-    
-      <!-- Favorites Page -->
-      <div id="favorites-page" class="page">
-        <div class="favorites-list" id="favorites-list">
-          <!-- Favorites will be populated by JavaScript -->
-        </div>
-      </div>
-    
-      <!-- Profile Page -->
-      <div id="profile-page" class="page">
-        <div class="profile-section">
-          <div class="profile-header">
-            <div class="profile-avatar">
-              <i class="ph ph-user"></i>
-            </div>
-            <div>
-              <h2>Golden Eagles</h2>
-              <p>Food Enthusiast</p>
-            </div>
+        <div class="card-content">
+          <h2 class="restaurant-name">Chipotle</h2>
+          <div class="restaurant-details">
+            <span>Mexican</span>
+            <span>$$</span>
+            <span>0.8 miles</span>
           </div>
-          <button class="settings-btn" onclick="openSettings()">
-            <i class="ph ph-gear"></i> Settings
-          </button>
+          <div class="rating">
+            <i class="ph ph-star-fill"></i>
+            <span>4.5</span>
+            <span>(2.3k reviews)</span>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="toolbar">
-      <div class="toolbar-btn active" onclick="showPage('home')">
-        <i class="ph ph-house"></i>
-        <span>Home</span>
-      </div>
-      <div class="toolbar-btn" onclick="showPage('search')">
-        <i class="ph ph-magnifying-glass"></i>
-        <span>Search</span>
-      </div>
-      <div class="toolbar-btn" onclick="showPage('favorites')">
-        <i class="ph ph-heart"></i>
-        <span>Favorites</span>
-      </div>
-      <div class="toolbar-btn" onclick="showPage('profile')">
+
+    <div class="navigation">
+      <button class="nav-btn" onclick="previousCard()">
+        <i class="ph ph-arrow-left"></i>
+      </button>
+      <button class="nav-btn" onclick="nextCard()">
+        <i class="ph ph-arrow-right"></i>
+      </button>
+    </div>
+    <div class="swipe-hint">
+      Swipe left or right to explore more restaurants
+    </div>
+  </div>
+</div>
+
+<!-- Search Page -->
+<div id="search-page" class="page">
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search restaurants, cuisines, or dishes..." oninput="searchRestaurants(this.value)">
+  </div>
+  <div id="search-results"></div>
+</div>
+
+<!-- Favorites Page -->
+<div id="favorites-page" class="page">
+  <div class="favorites-list" id="favorites-list">
+    <!-- Favorites will be populated by JavaScript -->
+  </div>
+</div>
+
+<!-- Profile Page -->
+<div id="profile-page" class="page">
+  <div class="profile-section">
+    <div class="profile-header">
+      <div class="profile-avatar">
         <i class="ph ph-user"></i>
-        <span>Profile</span>
+      </div>
+      <div>
+        <h2>John Doe</h2>
+        <p>Food Enthusiast</p>
+        <div id="user-preferences" class="user-preferences">
+          <!-- Preferences will be populated here -->
+        </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <button class="settings-btn" onclick="openQuiz()">
+      <i class="ph ph-questions"></i> Take Preferences Quiz
+    </button>
+    <button class="settings-btn" onclick="openSettings()">
+      <i class="ph ph-gear"></i> Settings
+    </button>
+  </div>
+</div>
+</div>
+
+<div class="toolbar">
+<div class="toolbar-btn active" onclick="showPage('home')">
+  <i class="ph ph-house"></i>
+  <span>Home</span>
+</div>
+<div class="toolbar-btn" onclick="showPage('search')">
+  <i class="ph ph-magnifying-glass"></i>
+  <span>Search</span>
+</div>
+<div class="toolbar-btn" onclick="showPage('favorites')">
+  <i class="ph ph-heart"></i>
+  <span>Favorites</span>
+</div>
+<div class="toolbar-btn" onclick="showPage('profile')">
+  <i class="ph ph-user"></i>
+  <span>Profile</span>
+</div>
+</div>
+<script src="script.js"></script>
 </body></html>
