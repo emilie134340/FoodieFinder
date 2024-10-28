@@ -1,30 +1,5 @@
 let currentCard = 0;
-const restaurants = [
-  {
-    name: 'Chipotle',
-    cuisine: 'Mexican',
-    price: '$$',
-    distance: '0.8 miles',
-    rating: 4.5,
-    reviews: '2.3k'
-  },
-  {
-    name: 'Sushi Delight',
-    cuisine: 'Japanese',
-    price: '$$$',
-    distance: '1.2 miles',
-    rating: 4.8,
-    reviews: '1.5k'
-  },
-  {
-    name: 'Pizza Roma',
-    cuisine: 'Italian',
-    price: '$$',
-    distance: '0.5 miles',
-    rating: 4.3,
-    reviews: '3.1k'
-  }
-];
+const restaurants = [];
 
 let filteredRestaurants = [...restaurants];
 let favorites = [];
@@ -32,8 +7,8 @@ let favorites = [];
 // User Preferences
 let userPreferences = {
   cuisine: [],
-  dietary: [],
-  priceRange: ''
+  dietaryRestrictions: [],
+  price_range: ''
 };
 
 const quizQuestions = [
@@ -47,13 +22,13 @@ const quizQuestions = [
     question: 'Do you have any dietary restrictions?',
     type: 'multiple',
     options: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free', 'None'],
-    key: 'dietary'
+    key: 'dietaryRestrictions'
   },
   {
     question: 'What\'s your preferred price range?',
     type: 'single',
     options: ['$', '$$', '$$$', '$$$$'],
-    key: 'priceRange'
+    key: 'price_range'
   }
 ];
 
@@ -99,6 +74,33 @@ function searchRestaurants(query) {
   displaySearchResults(searchResults);
 }
 
+async function fetchAndDisplayResults() {
+  const searchResultsDiv = document.getElementById('search-results');
+
+  try {
+    const response = await fetch('https://btrgiewhu8.execute-api.us-east-1.amazonaws.com/items');
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const data = await response.json();
+    
+    // Save the fetched data to `restaurants` and `filteredRestaurants`
+    restaurants.length = 0;  // Clear any old data
+    restaurants.push(...data);  // Add new data
+    filteredRestaurants = [...restaurants];  // Initialize filteredRestaurants
+
+    // Display the initial results
+    displaySearchResults(filteredRestaurants);
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    searchResultsDiv.innerHTML = `<p>Failed to load restaurant data. Please try again later.</p>`;
+  }
+}
+
+
 function displaySearchResults(results) {
   const searchResultsDiv = document.getElementById('search-results');
   searchResultsDiv.innerHTML = results.map(restaurant => `
@@ -108,18 +110,22 @@ function displaySearchResults(results) {
         <h2 class="restaurant-name">${restaurant.name}</h2>
         <div class="restaurant-details">
           <span>${restaurant.cuisine}</span>
-          <span>${restaurant.price}</span>
-          <span>${restaurant.distance}</span>
+          <span>${restaurant.price_range}</span>
+          <span>${restaurant.location}</span>
         </div>
         <div class="rating">
           <i class="ph ph-star-fill"></i>
-          <span>${restaurant.rating}</span>
-          <span>(${restaurant.reviews} reviews)</span>
+          <span>${restaurant.description}</span>
         </div>
       </div>
     </div>
   `).join('');
 }
+
+// Call the function to load and display the data
+fetchAndDisplayResults().then(updateCard); // Initialize the card after data is fetched
+
+
 
 // Favorites Functionality
 function toggleFavorite(restaurant) {
@@ -140,10 +146,10 @@ function displayFavorites() {
            alt="${restaurant.name}" />
       <div class="favorite-content">
         <h3>${restaurant.name}</h3>
-        <p>${restaurant.cuisine} • ${restaurant.price}</p>
+        <p>${restaurant.cuisine} • ${restaurant.price_range}</p>
         <div class="rating">
           <i class="ph ph-star-fill"></i>
-          <span>${restaurant.rating}</span>
+          <span>${restaurant.description}</span>
         </div>
       </div>
     </div>
@@ -218,11 +224,11 @@ function updatePreferencesDisplay() {
     ${userPreferences.cuisine.length ? `
       <div class="preference-tag">🍽️ ${userPreferences.cuisine.join(', ')}</div>
     ` : ''}
-    ${userPreferences.dietary.length ? `
-      <div class="preference-tag">🥗 ${userPreferences.dietary.join(', ')}</div>
+    ${userPreferences.dietaryRestrictions.length ? `
+      <div class="preference-tag">🥗 ${userPreferences.dietaryRestrictions.join(', ')}</div>
     ` : ''}
-    ${userPreferences.priceRange ? `
-      <div class="preference-tag">💰 ${userPreferences.priceRange}</div>
+    ${userPreferences.price_range ? `
+      <div class="preference-tag">💰 ${userPreferences.price_range}</div>
     ` : ''}
   `;
 }
@@ -237,13 +243,12 @@ function createCard(restaurant) {
         <h2 class="restaurant-name">${restaurant.name}</h2>
         <div class="restaurant-details">
           <span>${restaurant.cuisine}</span>
-          <span>${restaurant.price}</span>
-          <span>${restaurant.distance}</span>
+          <span>${restaurant.price_range}</span>
+          <span>${restaurant.location}</span>
         </div>
         <div class="rating">
           <i class="ph ph-star-fill"></i>
-          <span>${restaurant.rating}</span>
-          <span>(${restaurant.reviews} reviews)</span>
+          <span>${restaurant.description}</span>
         </div>
       </div>
     </div>
