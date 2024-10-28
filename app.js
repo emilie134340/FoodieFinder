@@ -1,16 +1,16 @@
-// Import express module
 const express = require('express');
+const path = require('path');
 const app = express();
 
-// Define a port (Render automatically assigns a port using environment variable)
-const port = process.env.PORT || 3000;
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Define a basic route
+// Serve the main HTML file
 app.get('/', (req, res) => {
-  res.send('Hello, World!');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Start the server and listen on the assigned port
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
