@@ -1,0 +1,624 @@
+[
+  {
+      "name": "The Hickory",
+      "location": "485 N 2nd E, Rexburg, ID 83440",
+      "cuisine": "Barbecue, American",
+      "price_range": "$$",
+      "description": "The Hickory is known for its slow-smoked barbecue, gourmet burgers, and rustic, relaxed atmosphere."
+  },
+  {
+      "name": "Original Thai",
+      "location": "10 E Main St, Rexburg, ID",
+      "cuisine": "Thai",
+      "price_range": "$$",
+      "description": "Authentic Thai flavors in a welcoming atmosphere."
+  },
+  {
+      "name": "Gringo's Mexican Restaurant",
+      "location": "43 S Center St, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$$",
+      "description": "Serving classic Mexican dishes with fresh ingredients."
+  },
+  {
+      "name": "Casa De Ochoa",
+      "location": "383 S 2nd W, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$",
+      "description": "A cozy spot for affordable Mexican favorites."
+  },
+  {
+      "name": "Mill Hollow",
+      "location": "48 S 1st E, Rexburg, ID",
+      "cuisine": "Desserts, Sandwiches, Smoothies",
+      "price_range": "$",
+      "description": "Delicious desserts, sandwiches, and smoothies."
+  },
+  {
+      "name": "Pizza Pie Cafe",
+      "location": "240 N 2nd E, Rexburg, ID",
+      "cuisine": "Pizza, Subs, Buffet",
+      "price_range": "$",
+      "description": "Pizza, subs, and a buffet experience."
+  },
+  {
+      "name": "Applebee's Neighborhood Grill",
+      "location": "975 University Blvd, Rexburg, ID",
+      "cuisine": "American, Burgers, Sandwiches",
+      "price_range": "$$",
+      "description": "Popular chain offering casual American eats."
+  },
+  {
+      "name": "Blister's BBQ",
+      "location": "15 N 12th W, Rexburg, ID",
+      "cuisine": "Barbecue, Southern",
+      "price_range": "$",
+      "description": "Barbecue and southern food in a casual setting."
+  },
+  {
+      "name": "Jimmy John's Gourmet Sandwiches",
+      "location": "109 S 2nd W, Rexburg, ID",
+      "cuisine": "Sandwiches, Subs",
+      "price_range": "$",
+      "description": "Chain specializing in sub and club sandwiches."
+  },
+  {
+      "name": "Cupbop Korean BBQ",
+      "location": "124 W Main St, Rexburg, ID",
+      "cuisine": "Asian, Korean, International",
+      "price_range": "$",
+      "description": "Street vendor style Korean BBQ with bold flavors."
+  },
+  {
+      "name": "G's Dairy Delights",
+      "location": "600 Handcart Ln, Rexburg, ID",
+      "cuisine": "Ice Cream, Yogurt",
+      "price_range": "$",
+      "description": "Sweet treats including ice cream and frozen yogurt."
+  },
+  {
+      "name": "Da Pineapple Grill",
+      "location": "383 S 2nd W, Rexburg, ID",
+      "cuisine": "Asian, Hawaiian",
+      "price_range": "$",
+      "description": "A fusion of Asian and Hawaiian flavors in a laid-back environment."
+  },
+  {
+      "name": "Wingers Roadhouse Diner",
+      "location": "110 S 2nd W, Rexburg, ID",
+      "cuisine": "American, Barbecue, Burgers",
+      "price_range": "$$",
+      "description": "Roadhouse-style dining with American and barbecue options."
+  },
+  {
+      "name": "Denny's",
+      "location": "650 N 2nd E, Rexburg, ID",
+      "cuisine": "American, Diner",
+      "price_range": "$",
+      "description": "American diner known for breakfast, lunch, and dinner options."
+  },
+  {
+      "name": "Frontier Pies",
+      "location": "460 W 4th S, Rexburg, ID",
+      "cuisine": "American, Pies, Comfort Food",
+      "price_range": "$$",
+      "description": "Classic American comfort food and a variety of pies."
+  },
+  {
+      "name": "Frosty Gator",
+      "location": "31 S 1st W, Rexburg, ID",
+      "cuisine": "Bar, Grill",
+      "price_range": "$",
+      "description": "Laid-back bar and grill with a variety of comfort food options."
+  },
+  {
+      "name": "Big Jud's",
+      "location": "411 W 7800 S, Rexburg, ID",
+      "cuisine": "American, Burgers",
+      "price_range": "$$",
+      "description": "Known for its massive burgers and laid-back atmosphere."
+  },
+  {
+      "name": "Costa Vida Fresh Mexican Grill",
+      "location": "485 N 2nd E, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$$",
+      "description": "Fresh Mexican food made from scratch."
+  },
+  {
+      "name": "New Fong's Chinese Restaurant",
+      "location": "160 W Main St, Rexburg, ID",
+      "cuisine": "Chinese",
+      "price_range": "$$",
+      "description": "Authentic Chinese flavors in a family-friendly setting."
+  },
+  {
+      "name": "Domino's Pizza",
+      "location": "175 W 2nd S, Rexburg, ID",
+      "cuisine": "Pizza",
+      "price_range": "$",
+      "description": "Well-known pizza chain offering a variety of pizzas and sides."
+  },
+  {
+      "name": "The Burg",
+      "location": "123 W Main St, Rexburg, ID",
+      "cuisine": "American, Burgers",
+      "price_range": "$",
+      "description": "Local favorite for burgers and shakes."
+  },
+  {
+      "name": "Five Guys",
+      "location": "315 N 2nd E, Rexburg, ID",
+      "cuisine": "American, Burgers",
+      "price_range": "$$",
+      "description": "Popular chain offering customizable burgers and fries."
+  },
+  {
+      "name": "Wingstop",
+      "location": "175 W 2nd S, Rexburg, ID",
+      "cuisine": "Wings, Fast Food",
+      "price_range": "$",
+      "description": "Casual chain specializing in wings, fries, and sauces."
+  },
+  {
+      "name": "McDonald's",
+      "location": "250 S 2nd W, Rexburg, ID",
+      "cuisine": "Fast Food",
+      "price_range": "$",
+      "description": "Classic fast-food chain known for burgers, fries, and shakes."
+  },
+  {
+      "name": "Dairy Queen",
+      "location": "48 N 2nd W, Rexburg, ID",
+      "cuisine": "Fast Food, Ice Cream",
+      "price_range": "$",
+      "description": "Fast-food chain offering burgers, fries, and ice cream treats."
+  },
+  {
+      "name": "Sonic Drive-In",
+      "location": "560 N 2nd E, Rexburg, ID",
+      "cuisine": "Fast Food, Burgers",
+      "price_range": "$",
+      "description": "Drive-in fast-food chain known for burgers, fries, and drinks."
+  },
+  {
+      "name": "Taqueria El Rancho",
+      "location": "49 W 1st S, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$",
+      "description": "Traditional Mexican dishes served in a casual setting."
+  },
+  {
+      "name": "Broulim's Fresh Foods",
+      "location": "124 W Main St, Rexburg, ID",
+      "cuisine": "Grocery, Deli",
+      "price_range": "$",
+      "description": "Local grocery store with a deli serving fresh meals."
+  },
+  {
+      "name": "Subway",
+      "location": "73 S Center St, Rexburg, ID",
+      "cuisine": "Sandwiches, Subs",
+      "price_range": "$",
+      "description": "Popular chain offering a variety of sandwiches and subs."
+  },
+  {
+      "name": "Great Harvest Bread Co.",
+      "location": "44 S Center St, Rexburg, ID",
+      "cuisine": "Bakery, Sandwiches",
+      "price_range": "$",
+      "description": "Freshly baked bread and sandwiches made to order."
+  },
+  {
+      "name": "Costa Vida Fresh Mexican Grill",
+      "location": "485 N 2nd E, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$$",
+      "description": "Fresh Mexican food made from scratch."
+  },
+  {
+      "name": "Domino's Pizza",
+      "location": "175 W 2nd S, Rexburg, ID",
+      "cuisine": "Pizza",
+      "price_range": "$",
+      "description": "Well-known pizza chain offering a variety of pizzas and sides."
+  },
+  {
+      "name": "The Burg",
+      "location": "123 W Main St, Rexburg, ID",
+      "cuisine": "American, Burgers",
+      "price_range": "$",
+      "description": "Local favorite for burgers and shakes."
+  },
+  {
+      "name": "Little Caesars Pizza",
+      "location": "118 E Main St, Rexburg, ID",
+      "cuisine": "Pizza",
+      "price_range": "$",
+      "description": "Fast-food pizza chain known for its affordable pies."
+  },
+  {
+      "name": "Papa Murphy's Take 'N' Bake Pizza",
+      "location": "482 N 2nd E, Rexburg, ID",
+      "cuisine": "Pizza",
+      "price_range": "$",
+      "description": "Pizza chain where customers take and bake at home."
+  },
+  {
+      "name": "Beto's Mexican Food",
+      "location": "535 N 2nd E, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$",
+      "description": "Mexican fast food with a range of burritos and tacos."
+  },
+  {
+      "name": "Arby's",
+      "location": "134 S Center St, Rexburg, ID",
+      "cuisine": "Fast Food, Sandwiches",
+      "price_range": "$",
+      "description": "Fast-food chain known for its roast beef sandwiches."
+  },
+  {
+      "name": "Taco Bell",
+      "location": "619 N 2nd E, Rexburg, ID",
+      "cuisine": "Mexican, Fast Food",
+      "price_range": "$",
+      "description": "Fast-food chain known for tacos, burritos, and Tex-Mex food."
+  },
+  {
+      "name": "Sizzler",
+      "location": "150 N 2nd E, Rexburg, ID",
+      "cuisine": "Steakhouse, American",
+      "price_range": "$$",
+      "description": "American restaurant chain specializing in steak, seafood, and salad bars."
+  },
+  {
+      "name": "KFC",
+      "location": "556 N 2nd E, Rexburg, ID",
+      "cuisine": "Fast Food, Chicken",
+      "price_range": "$",
+      "description": "Popular fast-food chain specializing in fried chicken."
+  },
+  {
+      "name": "Red Rabbit Grill",
+      "location": "155 W Main St, Rexburg, ID",
+      "cuisine": "American",
+      "price_range": "$$",
+      "description": "Casual dining with a variety of American dishes."
+  },
+  {
+      "name": "Arctic Circle",
+      "location": "82 S Center St, Rexburg, ID",
+      "cuisine": "Fast Food, Burgers",
+      "price_range": "$",
+      "description": "Fast food chain known for burgers, fries, and shakes."
+  },
+  {
+      "name": "Chick-fil-A",
+      "location": "409 S 2nd W, Rexburg, ID",
+      "cuisine": "Fast Food, Chicken",
+      "price_range": "$",
+      "description": "Popular fast-food chain known for chicken sandwiches."
+  },
+  {
+      "name": "Burger King",
+      "location": "102 E Main St, Rexburg, ID",
+      "cuisine": "Fast Food, Burgers",
+      "price_range": "$",
+      "description": "Fast-food chain known for its flame-grilled burgers."
+  },
+  {
+      "name": "Burger King",
+      "location": "944 University Blvd, Rexburg, ID",
+      "cuisine": "Burgers, Breakfast, Fast Food",
+      "price_range": "$",
+      "description": "Drive-in fast-food chain known for burgers, fries, and drinks.",
+      "phone": "(208) 356-5128"
+  },
+  {
+      "name": "Subway Sandwiches & Salads",
+      "location": "321 N 2nd E, Rexburg, ID",
+      "cuisine": "Subs, Wraps, Salads, Breakfast, Catering",
+      "price_range": "$",
+      "description": "Popular chain offering a variety of sandwiches and subs.",
+      "phone": "(208) 356-8234"
+  },
+  {
+      "name": "The Cookie Place",
+      "location": "24 W 1st S, Rexburg, ID",
+      "cuisine": "Desserts, Bakery",
+      "price_range": "$",
+      "description": "Specialty bakery offering a variety of cookies.",
+      "phone": "(208) 497-5315"
+  },
+  {
+      "name": "Panda Express",
+      "location": "1490 N 2nd E, Rexburg, ID",
+      "cuisine": "Chinese, Fast Food",
+      "price_range": "$",
+      "description": "Fast food chain serving American Chinese cuisine.",
+      "phone": "(208) 356-9977"
+  },
+  {
+      "name": "World's Best Corndogs",
+      "location": "150 W Main St, Rexburg, ID",
+      "cuisine": "Hot Dogs",
+      "price_range": "$",
+      "description": "Specialty food truck known for corndogs.",
+      "phone": "(801) 564-8322"
+  },
+  {
+      "name": "Crush",
+      "location": "155 West Main St, Rexburg, ID",
+      "cuisine": "American, Italian, Lounges, Bar",
+      "price_range": "$$",
+      "description": "Upscale dining with American and Italian options.",
+      "phone": "(208) 701-2221"
+  },
+  {
+      "name": "Cafe Sabor",
+      "location": "160 West 2nd S, Rexburg, ID",
+      "cuisine": "Latin American, Mexican",
+      "price_range": "$",
+      "description": "Mexican and Latin American cuisine in a vibrant setting.",
+      "phone": "(208) 656-2885"
+  },
+  {
+      "name": "Little Caesars Pizza",
+      "location": "26 W 1st S, Rexburg, ID",
+      "cuisine": "Pizza",
+      "price_range": "$",
+      "description": "Fast-food pizza chain known for affordable pies.",
+      "phone": "(208) 359-0071"
+  },
+  {
+      "name": "Broulim's Bistro & Deli",
+      "location": "124 W Main St, Rexburg, ID",
+      "cuisine": "American, Deli",
+      "price_range": "$$",
+      "description": "Local deli within Broulim's Fresh Foods.",
+      "phone": "(208) 356-4651"
+  },
+  {
+      "name": "T-Rex Burgers",
+      "location": "565 N 2nd E, Rexburg, ID",
+      "cuisine": "Burgers, Food Trucks",
+      "price_range": "$",
+      "description": "Burger food truck offering large, tasty burgers.",
+      "phone": "(208) 241-6958"
+  },
+  {
+      "name": "Nature's Nook",
+      "location": "160 E Valley River Dr, Rexburg, ID",
+      "cuisine": "Smoothies, Juice",
+      "price_range": "$$",
+      "description": "Health-focused shop offering smoothies and juice.",
+      "phone": "(208) 356-5284"
+  },
+  {
+      "name": "Del Taco",
+      "location": "568 N 2nd E, Rexburg, ID",
+      "cuisine": "Mexican, Fast Food",
+      "price_range": "$",
+      "description": "Mexican fast-food chain with a variety of options.",
+      "phone": "(208) 881-5305"
+  },
+  {
+      "name": "Wendy's",
+      "location": "1117 South Yellowstone Hwy, Rexburg, ID",
+      "cuisine": "Burgers, Fast Food",
+      "price_range": "$",
+      "description": "Fast-food chain known for burgers, fries, and salads.",
+      "phone": "(208) 497-0075"
+  },
+  {
+      "name": "Steak N' Berries",
+      "location": "250 W Main St, Rexburg, ID",
+      "cuisine": "Food Trucks, Cheesesteaks, Acai Bowls",
+      "price_range": "$$",
+      "description": "Food truck offering cheesesteaks and acai bowls.",
+      "phone": "(208) 973-5630"
+  },
+  {
+      "name": "Teton House",
+      "location": "555 S 3rd W Ofc, Rexburg, ID",
+      "cuisine": "Bar, Seafood, Steakhouse",
+      "price_range": "$",
+      "description": "Restaurant offering steak and seafood options.",
+      "phone": "(208) 359-2478"
+  },
+  {
+      "name": "Thornton Merc",
+      "location": "4856 S Highway 191, Rexburg, ID",
+      "cuisine": "American",
+      "price_range": "$$",
+      "description": "American dining in a casual setting.",
+      "phone": "(208) 356-6649"
+  },
+  {
+      "name": "Taqueria El Rancho",
+      "location": "166 E 7th N, Rexburg, ID",
+      "cuisine": "Mexican",
+      "price_range": "$",
+      "description": "Casual spot for Mexican food.",
+      "phone": "(208) 359-6065"
+  },
+  {
+      "name": "Crossroads Cafe",
+      "location": "Manwaring Center - BYU-Idaho, Rexburg, ID",
+      "cuisine": "Pizza, American, Chinese",
+      "price_range": "$",
+      "description": "Cafeteria with diverse food options.",
+      "phone": "(208) 496-1411"
+  },
+  {
+        "name": "Great Harvest Bread Co.",
+        "location": "16 S Center St, Rexburg, ID",
+        "cuisine": "Bakery",
+        "price_range": "$",
+        "description": "Bakery offering a variety of fresh bread and baked goods.",
+        "phone": "(208) 356-6579"
+    },
+    {
+        "name": "Pickett's Bambino",
+        "location": "115 S 2nd W, Rexburg, ID",
+        "cuisine": "International, Italian, Pizza",
+        "price_range": "$",
+        "description": "Italian restaurant known for pizza and international dishes.",
+        "phone": "(208) 359-9796"
+    },
+    {
+        "name": "Sammy's",
+        "location": "50 College Ave, Rexburg, ID",
+        "cuisine": "Burgers, Desserts, Ice Cream",
+        "price_range": "$$",
+        "description": "Popular spot for burgers and unique desserts.",
+        "phone": "(208) 419-0816"
+    },
+    {
+        "name": "Gator Jacks",
+        "location": "160 W 2nd S, Rexburg, ID",
+        "cuisine": "Barbecue, Sandwiches, Subs",
+        "price_range": "$",
+        "description": "Casual dining with barbecue and sandwiches.",
+        "phone": "(208) 356-0779"
+    },
+    {
+        "name": "Hard Hat Steakhouse & Grill",
+        "location": "859 S Yellowstone Hwy, Rexburg, ID",
+        "cuisine": "Steakhouse, Seafood, American",
+        "price_range": "$$$",
+        "description": "Steakhouse known for high-quality steaks and seafood.",
+        "phone": "(208) 356-6115"
+    },
+    {
+        "name": "Papa Kelsey's Pizza & Subs",
+        "location": "40 W 1st S #1, Rexburg, ID",
+        "cuisine": "Pizza, Subs",
+        "price_range": "$",
+        "description": "Casual pizza and sub shop.",
+        "phone": "(208) 356-9300"
+    },
+    {
+        "name": "New York Burrito",
+        "location": "80 E Main St, Rexburg, ID",
+        "cuisine": "Mexican, Wraps",
+        "price_range": "$",
+        "description": "Mexican burrito joint with various wrap options.",
+        "phone": "(208) 356-3446"
+    },
+    {
+        "name": "Jack in the Box",
+        "location": "461 N 2nd E, Rexburg, ID",
+        "cuisine": "Burgers, Breakfast, Fast Food",
+        "price_range": "$",
+        "description": "Fast food chain offering burgers, breakfast, and more.",
+        "phone": "(208) 656-9284"
+    },
+    {
+        "name": "The Nipa Hut",
+        "location": "565 N 2nd E, Rexburg, ID",
+        "cuisine": "Filipino, American",
+        "price_range": "$",
+        "description": "Filipino-American fusion cuisine.",
+        "phone": "(208) 351-5373"
+    },
+    {
+        "name": "Farmer's Bakery",
+        "location": "160 W 2nd S, Rexburg, ID",
+        "cuisine": "Bakery",
+        "price_range": "$$",
+        "description": "Local bakery with a range of fresh-baked goods.",
+        "phone": "(208) 313-9881"
+    },
+    {
+        "name": "Redd's Grill",
+        "location": "722 N 12th W, Rexburg, ID",
+        "cuisine": "Burgers, Sandwiches, Hot Dogs",
+        "price_range": "$",
+        "description": "Grill offering burgers, sandwiches, and hot dogs.",
+        "phone": "(208) 403-8233"
+    },
+    {
+        "name": "Frisky's Cafe",
+        "location": "160 W 2nd S, Rexburg, ID",
+        "cuisine": "Salads, Yogurt, Health, Cafe",
+        "price_range": "$",
+        "description": "Health-focused cafe with salads and yogurt options.",
+        "phone": "(208) 520-5933"
+    },
+    {
+        "name": "Grandpas Southern Bar-B-Q",
+        "location": "25 S Center St, Rexburg, ID",
+        "cuisine": "Barbecue",
+        "price_range": "$$",
+        "description": "Southern-style barbecue in a family-friendly environment.",
+        "phone": "(208) 201-6196"
+    },
+    {
+        "name": "The Doghouse",
+        "location": "155 W Main St, Rexburg, ID",
+        "cuisine": "Hot Dogs, Street Vendors",
+        "price_range": "$",
+        "description": "Casual hot dog stand with a variety of toppings.",
+        "phone": "(208) 351-5796"
+    },
+    {
+        "name": "Joe's Filling Station",
+        "location": "727 N 2nd E, Rexburg, ID",
+        "cuisine": "American",
+        "price_range": "$$",
+        "description": "Classic American diner with a variety of comfort foods.",
+        "phone": "(208) 356-9180"
+    },
+    {
+        "name": "Hot Stuff Pizza",
+        "location": "7875 S 1800 W, Rexburg, ID",
+        "cuisine": "Pizza, Subs, Sandwiches",
+        "price_range": "$",
+        "description": "Pizza and subs with various toppings.",
+        "phone": "(208) 705-6937"
+    },
+    {
+        "name": "Twizlberry",
+        "location": "68 S Center, Rexburg, ID",
+        "cuisine": "Desserts, Ice Cream",
+        "price_range": "$",
+        "description": "Frozen yogurt shop with multiple flavors and toppings.",
+        "phone": "(208) 356-5656"
+    },
+    {
+        "name": "Puerto Vallarta Mexican Restaurant",
+        "location": "155 W Main St #8, Rexburg, ID",
+        "cuisine": "Mexican",
+        "price_range": "$",
+        "description": "Authentic Mexican food in a relaxed setting.",
+        "phone": "(208) 356-9558"
+    },
+    {
+          "name": "Loft Creek Steak Co",
+          "location": "12 W Main St, Rexburg, ID",
+          "cuisine": "Steak, American, Burgers",
+          "price_range": "$$",
+          "description": "Steakhouse serving American cuisine and burgers.",
+          "phone": "(208) 356-3668"
+    },
+    {
+          "name": "Frank's Place",
+          "location": "25 S Center St, Rexburg, ID",
+          "cuisine": "American",
+          "price_range": "$$",
+          "description": "Casual American restaurant with a variety of dishes.",
+          "phone": "(208) 359-9444"
+    },
+    {
+          "name": "Caliente",
+          "location": "Manwaring Center, Rexburg, ID",
+          "cuisine": "Mexican",
+          "price_range": "$$$",
+          "description": "Mexican restaurant with a range of traditional dishes.",
+          "phone": "(208) 496-2800"
+    }
+  ]
+  
+
