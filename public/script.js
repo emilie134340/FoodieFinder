@@ -15,13 +15,13 @@ const quizQuestions = [
   {
     question: 'What cuisines do you prefer?',
     type: 'multiple',
-    options: ['Italian', 'Mexican', 'Japanese', 'Indian', 'Thai', 'American'],
+    options: ['Italian', 'Mexican', 'Sushi', 'Indian', 'Thai', 'American', 'Hawaiian', 'Fast Food', 'Barbecue', 'French', 'Café', 'Deli', 'Pizza'],
     key: 'cuisine'
   },
   {
     question: 'Do you have any dietary restrictions?',
     type: 'multiple',
-    options: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free', 'None'],
+    options: ['Vegetarian', 'Vegan', 'Gluten-Free', 'Dairy-Free', 'Nut-Free'],
     key: 'dietaryRestrictions'
   },
   {
@@ -87,18 +87,21 @@ async function fetchAndDisplayResults() {
     const data = await response.json();
     
     // Save the fetched data to `restaurants` and `filteredRestaurants`
-    restaurants.length = 0;  // Clear any old data
-    restaurants.push(...data);  // Add new data
-    filteredRestaurants = [...restaurants];  // Initialize filteredRestaurants
-
+    restaurants.length = 0;
+    restaurants.push(...data);
+    filteredRestaurants = [...restaurants]; // Initialize with all restaurants
+    
     // Display the initial results
     displaySearchResults(filteredRestaurants);
+    updateCard(); // Display the first card
 
   } catch (error) {
     console.error('Error fetching data:', error);
     searchResultsDiv.innerHTML = `<p>Failed to load restaurant data. Please try again later.</p>`;
   }
 }
+
+
 
 
 function displaySearchResults(results) {
@@ -202,21 +205,32 @@ function toggleOption(element, type) {
 }
 
 function submitQuiz() {
-  quizQuestions.forEach(q => {
-    const options = document.querySelector(`[data-key="${q.key}"]`);
-    const selected = Array.from(options.querySelectorAll('.selected'))
-      .map(opt => opt.textContent);
+  try {
+    quizQuestions.forEach(q => {
+      const options = document.querySelector(`[data-key="${q.key}"]`);
+      const selected = Array.from(options.querySelectorAll('.selected')).map(opt => opt.textContent);
+
+      if (q.type === 'single') {
+        userPreferences[q.key] = selected[0] || '';
+      } else {
+        userPreferences[q.key] = selected;
+      }
+    });
+
+    updatePreferencesDisplay();
+    filterRestaurantsByPreferences(); // Apply filtering based on preferences
     
-    if (q.type === 'single') {
-      userPreferences[q.key] = selected[0] || '';
-    } else {
-      userPreferences[q.key] = selected;
-    }
-  });
-  
-  updatePreferencesDisplay();
-  document.querySelector('.quiz-modal').remove();
+  } catch (error) {
+    console.error("Error while submitting the quiz:", error);
+  }
+
+  // Ensure the modal is removed
+  const quizModal = document.querySelector('.quiz-modal');
+  if (quizModal) {
+    quizModal.remove();
+  }
 }
+
 
 function updatePreferencesDisplay() {
   const container = document.getElementById('user-preferences');
@@ -232,6 +246,25 @@ function updatePreferencesDisplay() {
     ` : ''}
   `;
 }
+
+function filterRestaurantsByPreferences() {
+  filteredRestaurants = restaurants.filter(restaurant => {
+    const matchesCuisine = userPreferences.cuisine.length === 0 || 
+      userPreferences.cuisine.some(preference => restaurant.cuisine.includes(preference));
+    const matchesDietary = userPreferences.dietaryRestrictions.length === 0 || 
+      userPreferences.dietaryRestrictions.every(diet => restaurant.dietaryRestrictions.includes(diet));
+    const matchesPrice = !userPreferences.price_range || restaurant.price_range === userPreferences.price_range;
+    
+    return matchesCuisine && matchesDietary && matchesPrice;
+  });
+  
+  console.log("Filtered restaurants:", filteredRestaurants); // Check the filtered results
+  currentCard = 0; // Reset to the first card
+  updateCard(); // Refresh the displayed card
+}
+
+
+
 
 // Card Navigation
 function createCard(restaurant) {
@@ -257,32 +290,45 @@ function createCard(restaurant) {
 
 function updateCard() {
   const cardContainer = document.querySelector('.card-container');
-  cardContainer.innerHTML = createCard(filteredRestaurants[currentCard]);
+  
+  if (filteredRestaurants.length === 0) {
+    cardContainer.innerHTML = `<p>No restaurants match your preferences. Please adjust your filters.</p>`;
+  } else {
+    cardContainer.innerHTML = createCard(filteredRestaurants[currentCard]);
+  }
 }
 
+
+
 function nextCard() {
+  if (filteredRestaurants.length === 0) return; // Prevent swipe if no restaurants
+
   const cardContainer = document.querySelector('.card-container');
   const currentElement = cardContainer.children[0];
-  
+
   currentCard = (currentCard + 1) % filteredRestaurants.length;
-  
   currentElement.style.transform = 'translateX(-120%)';
+  
   setTimeout(() => {
     cardContainer.innerHTML = createCard(filteredRestaurants[currentCard]);
   }, 300);
 }
 
 function previousCard() {
+  if (filteredRestaurants.length === 0) return; // Prevent swipe if no restaurants
+
   const cardContainer = document.querySelector('.card-container');
   const currentElement = cardContainer.children[0];
-  
+
   currentCard = (currentCard - 1 + filteredRestaurants.length) % filteredRestaurants.length;
-  
   currentElement.style.transform = 'translateX(120%)';
+  
   setTimeout(() => {
     cardContainer.innerHTML = createCard(filteredRestaurants[currentCard]);
   }, 300);
 }
+
+
 
 // Swipe Functionality
 let touchStartX = 0;
